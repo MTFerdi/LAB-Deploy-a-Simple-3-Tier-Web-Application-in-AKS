@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head><meta charset="utf-8"><title>Basic3TierUI</title></head>
+  <body>
+    <h1>Basic3Tier UI</h1>
+    <p>If you see this from Ingress, NGINX is serving the UI.</p>
+    <div id="api-result"></div>
+    <script>
+      // naive sample call to API
+      fetch('/api/health').then(r=>r.text()).then(t=>{
+        document.getElementById('api-result').innerText = 'API says: ' + t;
+      }).catch(e=>{
+        document.getElementById('api-result').innerText = 'API call failed (configure service/ingress later).';
+      });
+    </script>
+  </body>
+</html>

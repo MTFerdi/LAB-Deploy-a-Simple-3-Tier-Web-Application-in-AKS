@@ -1,0 +1,6 @@
+@Basic3TierAPI_HostAddress = http://localhost:5273
+
+GET {{Basic3TierAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
